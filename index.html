@@ -1,0 +1,2368 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Empanadas Artesanales Santivañez</title>
+
+<style>
+
+/* ==================================================
+   ESTILOS GENERALES
+================================================== */
+
+*{
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#fff8f0;
+    color:#4a2c20;
+}
+
+h1,h2,h3{
+    font-family:Georgia, "Times New Roman", serif;
+}
+
+
+/* ==================================================
+   ENCABEZADO
+================================================== */
+
+header{
+    background:linear-gradient(135deg,#8e3200,#d35400,#e67e22);
+    color:white;
+    text-align:center;
+    padding:55px 20px;
+}
+
+header h1{
+    font-size:42px;
+    margin:0 0 15px;
+    text-shadow:2px 2px 5px rgba(0,0,0,.25);
+}
+
+header p{
+    font-size:20px;
+}
+
+.boton-principal{
+    display:inline-block;
+    margin-top:18px;
+    padding:14px 30px;
+    background:white;
+    color:#9b430d;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    font-size:17px;
+    transition:.3s;
+}
+
+.boton-principal:hover{
+    transform:scale(1.05);
+    background:#fff0dd;
+}
+
+
+/* ==================================================
+   MENÚ
+================================================== */
+
+nav{
+    background:#682600;
+    padding:15px 10px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 10px rgba(0,0,0,.2);
+}
+
+nav a,
+.boton-publicidad-menu{
+    display:inline-block;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    margin:5px 9px;
+    font-size:16px;
+}
+
+nav a:hover,
+.boton-publicidad-menu:hover{
+    color:#ffd08a;
+}
+
+.boton-publicidad-menu{
+    background:none;
+    border:none;
+    cursor:pointer;
+    font-family:Arial,sans-serif;
+}
+
+
+/* ==================================================
+   SECCIONES
+================================================== */
+
+section{
+    padding:55px 7%;
+}
+
+h2{
+    text-align:center;
+    color:#c44f00;
+    font-size:32px;
+    margin-bottom:35px;
+}
+
+
+/* ==================================================
+   PRESENTACIÓN
+================================================== */
+
+.inicio{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    line-height:1.8;
+    font-size:17px;
+}
+
+.inicio strong{
+    color:#a04000;
+}
+
+
+/* ==================================================
+   GALERÍA
+================================================== */
+
+.filtros{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.filtros button{
+    width:auto;
+    background:#fffaf5;
+    color:#914000;
+    border:2px solid #d35400;
+    padding:10px 18px;
+    margin:5px;
+    border-radius:25px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.filtros button:hover,
+.filtros button.activo{
+    background:#d35400;
+    color:white;
+}
+
+
+/* 5 FICHAS ARRIBA Y 5 ABAJO */
+
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:20px;
+    max-width:1400px;
+    margin:auto;
+}
+
+
+/* ==================================================
+   FICHAS DE EMPANADAS
+================================================== */
+
+.producto{
+    border-radius:18px;
+    overflow:hidden;
+    text-align:center;
+    box-shadow:0 5px 16px rgba(90,45,10,.16);
+    transition:.3s;
+    border:2px solid rgba(150,80,20,.15);
+}
+
+.producto:hover{
+    transform:translateY(-7px);
+    box-shadow:0 10px 22px rgba(90,45,10,.23);
+}
+
+.producto img{
+    width:100%;
+    height:170px;
+    object-fit:cover;
+}
+
+.producto-contenido{
+    padding:17px 12px 20px;
+}
+
+.producto h3{
+    font-size:20px;
+    margin:5px 0 10px;
+    color:#783b18;
+}
+
+.producto p{
+    color:#65483b;
+    min-height:42px;
+    font-size:14px;
+    line-height:1.4;
+}
+
+.precio{
+    color:#a9460c !important;
+    font-size:21px !important;
+    font-weight:bold;
+    min-height:auto !important;
+}
+
+.cantidad-box{
+    margin:15px 0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:7px;
+}
+
+.cantidad{
+    width:62px;
+    padding:8px;
+    text-align:center;
+    border:1px solid #c8a58b;
+    border-radius:8px;
+    font-size:15px;
+    background:white;
+}
+
+.boton-pedir{
+    display:block;
+    background:#9b430d;
+    color:white;
+    padding:10px;
+    border-radius:22px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.boton-pedir:hover{
+    background:#d35400;
+}
+
+
+/* ==================================================
+   COLORES DE LAS FICHAS
+================================================== */
+
+.producto-1{
+    background:#f8dfc3;
+}
+
+.producto-2{
+    background:#f2d0b3;
+}
+
+.producto-3{
+    background:#f8e4a8;
+}
+
+.producto-4{
+    background:#f4c7a1;
+}
+
+.producto-5{
+    background:#ead2b8;
+}
+
+.producto-6{
+    background:#f7d8b5;
+}
+
+.producto-7{
+    background:#f3e0b5;
+}
+
+.producto-8{
+    background:#e8c5a8;
+}
+
+.producto-9{
+    background:#f6cf9d;
+}
+
+.producto-10{
+    background:#edd9bd;
+}
+
+
+/* ==================================================
+   PROMOCIONES
+================================================== */
+
+.promociones{
+    background:linear-gradient(135deg,#ffe0b2,#fff0dd);
+}
+
+.promo-contenedor{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+}
+
+.promo{
+    background:#fffaf5;
+    width:280px;
+    padding:25px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(90,45,10,.13);
+}
+
+.promo h3{
+    color:#b44b0c;
+}
+
+
+/* ==================================================
+   PEDIDO
+================================================== */
+
+.pedido-contenedor{
+    max-width:700px;
+    margin:auto;
+}
+
+.caja-pedido{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 18px rgba(90,45,10,.15);
+}
+
+.caja-pedido h3{
+    text-align:center;
+    color:#a04000;
+    font-size:25px;
+}
+
+.caja-pedido label{
+    display:block;
+    margin-top:12px;
+    font-weight:bold;
+}
+
+.caja-pedido input,
+.caja-pedido textarea,
+.caja-pedido select{
+    width:100%;
+    padding:12px;
+    margin-top:7px;
+    border:1px solid #cdb5a2;
+    border-radius:9px;
+    font-size:15px;
+    background:#fffdfb;
+}
+
+.caja-pedido textarea{
+    height:90px;
+    resize:none;
+}
+
+
+/* ==================================================
+   MEDIO DE PAGO
+================================================== */
+
+.medios-pago{
+    background:#fff3df;
+    padding:18px;
+    border-radius:14px;
+    margin-top:18px;
+}
+
+.medios-pago h4{
+    margin-top:0;
+    color:#a04000;
+}
+
+.opciones-pago{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.opciones-pago label{
+    background:white;
+    border:1px solid #d5b18f;
+    padding:10px 14px;
+    border-radius:20px;
+    cursor:pointer;
+    margin:0;
+}
+
+.opciones-pago input{
+    width:auto;
+    margin-right:5px;
+}
+
+
+/* ==================================================
+   RESUMEN
+================================================== */
+
+.resumen{
+    background:#fff3e0;
+    padding:18px;
+    border-radius:12px;
+    margin-top:20px;
+}
+
+.resumen h4{
+    color:#a04000;
+    margin-top:0;
+}
+
+.total{
+    text-align:center;
+    color:#d35400;
+    font-size:27px;
+    font-weight:bold;
+    margin:20px 0;
+}
+
+
+/* ==================================================
+   BOTÓN WHATSAPP
+================================================== */
+
+.boton-whatsapp{
+    background:#25D366;
+    color:white;
+    border:none;
+    padding:14px;
+    border-radius:25px;
+    width:100%;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.boton-whatsapp:hover{
+    background:#128C7E;
+}
+
+
+/* ==================================================
+   PUBLICIDAD OCULTA
+================================================== */
+
+.publicidad{
+    display:none;
+    background:linear-gradient(135deg,#fff3df,#f6d8b8);
+    animation:aparecer .4s ease;
+}
+
+.publicidad.mostrar{
+    display:block;
+}
+
+@keyframes aparecer{
+
+    from{
+        opacity:0;
+        transform:translateY(-15px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+/* ==================================================
+   FORMULARIO PUBLICAR NEGOCIO
+================================================== */
+
+.publicar-caja{
+    max-width:700px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 18px rgba(90,45,10,.15);
+}
+
+.publicar-caja h3{
+    text-align:center;
+    color:#a04000;
+    font-size:26px;
+}
+
+.publicar-caja label{
+    display:block;
+    margin-top:12px;
+    font-weight:bold;
+}
+
+.publicar-caja input,
+.publicar-caja textarea{
+    width:100%;
+    padding:12px;
+    margin-top:7px;
+    border:1px solid #cdb5a2;
+    border-radius:9px;
+    font-size:15px;
+}
+
+.publicar-caja textarea{
+    height:100px;
+    resize:none;
+}
+
+.boton-publicar{
+    background:#d35400;
+    color:white;
+    border:none;
+    padding:14px;
+    width:100%;
+    border-radius:25px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    margin-top:20px;
+}
+
+.boton-publicar:hover{
+    background:#a04000;
+}
+
+
+/* ==================================================
+   VISTA PREVIA DE IMAGEN
+================================================== */
+
+#vistaImagen{
+    display:none;
+    width:180px;
+    height:140px;
+    object-fit:cover;
+    border-radius:15px;
+    margin:15px auto;
+    box-shadow:0 4px 12px rgba(0,0,0,.2);
+}
+
+
+/* ==================================================
+   NEGOCIOS PUBLICADOS
+================================================== */
+
+.negocios{
+    margin-top:30px;
+}
+
+.negocio{
+    background:#fff8ef;
+    border-left:6px solid #d35400;
+    padding:18px;
+    margin-top:15px;
+    border-radius:12px;
+}
+
+.negocio img{
+    width:160px;
+    height:120px;
+    object-fit:cover;
+    border-radius:12px;
+    display:block;
+    margin:12px 0;
+}
+
+.negocio h4{
+    color:#a04000;
+    margin:0 0 8px;
+}
+
+
+/* ==================================================
+   CONTACTO
+================================================== */
+
+.contacto{
+    text-align:center;
+}
+
+.contacto p{
+    font-size:18px;
+}
+
+.redes{
+    margin-top:25px;
+}
+
+.redes a{
+    display:inline-block;
+    background:#a04000;
+    color:white;
+    text-decoration:none;
+    padding:12px 20px;
+    margin:5px;
+    border-radius:25px;
+}
+
+.redes a:hover{
+    background:#d35400;
+}
+
+
+/* ==================================================
+   PIE DE PÁGINA
+================================================== */
+
+footer{
+    background:#682600;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media(max-width:1100px){
+
+    .galeria{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+}
+
+
+/* ==================================================
+   CELULAR
+================================================== */
+
+@media(max-width:700px){
+
+    header h1{
+        font-size:30px;
+    }
+
+    nav a,
+    .boton-publicidad-menu{
+        display:inline-block;
+        margin:6px 5px;
+    }
+
+    section{
+        padding:40px 5%;
+    }
+
+    .galeria{
+        grid-template-columns:repeat(2,1fr);
+        gap:15px;
+    }
+
+    .producto img{
+        height:150px;
+    }
+
+    .producto h3{
+        font-size:17px;
+    }
+
+}
+
+
+/* ==================================================
+   CELULARES PEQUEÑOS
+================================================== */
+
+@media(max-width:480px){
+
+    .galeria{
+        grid-template-columns:1fr;
+    }
+
+    .producto img{
+        height:190px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ==================================================
+     ENCABEZADO
+================================================== -->
+
+<header id="inicio">
+
+    <h1>🥟 Empanadas Artesanales Santivañez</h1>
+
+    <p>
+        Sabor casero, tradición y calidad en cada empanada ❤️
+    </p>
+
+    <a href="#galeria" class="boton-principal">
+        Ver nuestros sabores
+    </a>
+
+</header>
+
+
+<!-- ==================================================
+     MENÚ
+================================================== -->
+
+<nav>
+
+    <a href="#inicio">Inicio</a>
+
+    <a href="#galeria">Galería</a>
+
+    <a href="#promociones">Promociones</a>
+
+    <a href="#pedido">Pedido</a>
+
+    <a href="#contacto">Contacto</a>
+
+    <button
+        class="boton-publicidad-menu"
+        onclick="mostrarPublicidad()">
+
+        📢 Publicidad
+
+    </button>
+
+</nav>
+
+
+<!-- ==================================================
+     PRESENTACIÓN
+================================================== -->
+
+<section>
+
+    <div class="inicio">
+
+        <h2>✨ Bienvenidos</h2>
+
+        <p>
+            Somos un emprendimiento dedicado a la elaboración de
+            <strong>empanadas artesanales</strong>, preparadas con
+            ingredientes frescos, seleccionados y de buena calidad.
+        </p>
+
+        <p>
+            Nuestro propósito es mantener el
+            <strong>sabor tradicional de Santivañez</strong>,
+            ofreciendo productos deliciosos, frescos y preparados
+            con dedicación para nuestra comunidad y sus alrededores.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     GALERÍA
+================================================== -->
+
+<section id="galeria">
+
+    <h2>🥟 Galería de Empanadas</h2>
+
+    <div class="filtros">
+
+        <button onclick="filtrar('todos',this)">
+            🥟 Todos
+        </button>
+
+        <button onclick="filtrar('queso',this)">
+            🧀 Queso
+        </button>
+
+        <button onclick="filtrar('carne',this)">
+            🥩 Carne
+        </button>
+
+        <button onclick="filtrar('pollo',this)">
+            🍗 Pollo
+        </button>
+
+        <button onclick="filtrar('especial',this)">
+            ⭐ Especiales
+        </button>
+
+    </div>
+
+
+    <div class="galeria">
+
+
+        <!-- 1 QUESO -->
+
+        <div class="producto producto-1 queso">
+
+            <img src="empanadas de queso.jpeg"
+                 alt="Empanada de queso">
+
+            <div class="producto-contenido">
+
+                <h3>🧀 Empanada de Queso</h3>
+
+                <p>
+                    Rellena con queso, preparada con un
+                    delicioso toque casero.
+                </p>
+
+                <p class="precio">
+                    Bs. 10
+                </p>
+
+                <div class="cantidad-box">
+
+                    <label>Cantidad:</label>
+
+                    <input
+                        type="number"
+                        id="queso"
+                        class="cantidad"
+                        value="0"
+                        min="0">
+
+                </div>
+
+                <a href="#pedido" class="boton-pedir">
+                    🛒 Pedir
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- 2 CARNE -->
+
+        <div class="producto producto-2 carne">
+
+            <img src="empanadas de carne.jpeg"
+                 alt="Empanada de carne">
+
+            <div class="producto-contenido">
+
+                <h3>🥩 Empanada de Carne</h3>
+
+                <p>
+                    Carne sazonada con ingredientes
+                    tradicionales.
+                </p>
+
+                <p class="precio">
+                    Bs. 10
+                </p>
+
+                <div class="cantidad-box">
+
+                    <label>Cantidad:</label>
+
+                    <input
+                        type="number"
+                        id="carne"
+                        class="cantidad"
+                        value="0"
+                        min="0">
+
+                </div>
+
+                <a href="#pedido" class="boton-pedir">
+                    🛒 Pedir
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- 3 POLLO -->
+
+        <div class="producto producto-3 pollo">
+
+            <img src="empanadas de pollo .jpeg"
+                 alt="Empanada de pollo">
+
+            <div class="producto-contenido">
+
+                <h3>🍗 Empanada de Pollo</h3>
+
+                <p>
+                    Pollo jugoso preparado con especias
+                    tradicionales.
+                </p>
+
+                <p class="precio">
+                    Bs. 10
+                </p>
+
+                <div class="cantidad-box">
+
+                    <label>Cantidad:</label>
+
+                    <input
+                        type="number"
+                        id="pollo"
+                        class="cantidad"
+                        value="0"
+                        min="0">
+
+                </div>
+
+                <a href="#pedido" class="boton-pedir">
+                    🛒 Pedir
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- 4 HUEVO -->
+
+        <div class="producto producto-4 especial">
+
+            <img src="empanadas.jpeg"
+                 alt="Empanada de huevo">
+
+            <div class="producto-contenido">
+
+                <h3>🥚 Empanada de Huevo</h3>
+
+                <p>
+                    Relleno de huevo preparado con
+                    condimentos tradicionales.
+                </p>
+
+                <p class="precio">
+                    Bs. 10
+                </p>
+
+                <div class="cantidad-box">
+
+                    <label>Cantidad:</label>
+
+                    <input
+                        type="number"
+                        id="huevo"
+                        class="cantidad"
+                        value="0"
+                        min="0">
+
+                </div>
+
+                <a href="#pedido" class="boton-pedir">
+                    🛒 Pedir
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- 5 JAMÓN Y QUESO -->
+
+        <div class="producto producto-5 queso">
+
+            <img src="empanadas.jpeg"
+                 alt="Empanada de jamón y queso">
+
+            <div class="producto-contenido">
+
+                <h3>🧀 Jamón y Queso</h3>
+
+                <p>
+                    Una combinación cremosa,
+                    suave y deliciosa.
+                </p>
+
+                <p class="precio">
+                    Bs. 10
+                </p>
+
+                <div class="cantidad-box">
+
+                    <label>Cantidad:</label>
+
+                    <input
+                        type="number"
+                        id="jamon"
+                        class="cantidad"
+                        value="0"
+                        min="0">
+
+                </div>
+
+                <a href="#pedido" class="boton-pedir">
+                    🛒 Pedir
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- 6 CHOCLO -->
+
+        <div class="producto producto-6 especial">
+
+            <img src="empanadas.jpeg"
+                 alt="Empanada de choclo">
+
+            <div class="producto-contenido">
+
+                <h3>🌽 Empanada de Choclo</h3>
+
+                <p>
+                    Choclo sazonado con un
+                    delicioso toque casero.
+                </p>
+
+                <p class="precio">
+                    Bs. 10
+                </p>
+
+                <div class="cantidad-box">
+
+                    <label>Cantidad:</label>
+
+                    <input
+                        type="number"
+                        id="choclo"
+                        class="cantidad"
+                        value="0"
+                        min="0">
+
+                </div>
+
+                <a href="#pedido" class="boton-pedir">
+                    🛒 Pedir
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- 7 PAPA -->
+
+        <div class="producto producto-7 especial">
+
+            <img src="empanadas.jpeg"
+                 alt="Empanada de papa">
+
+            <div class="producto-contenido">
+
+                <h3>🥔 Empanada de Papa</h3>
+
+                <p>
+                    Papa condimentada con
+                    ingredientes tradicionales.
+                </p>
+
+                <p class="precio">
+                    Bs. 10
+                </p>
+
+                <div class="cantidad-box">
+
+                    <label>Cantidad:</label>
+
+                    <input
+                        type="number"
+                        id="papa"
+                        class="cantidad"
+                        value="0"
+                        min="0">
+
+                </div>
+
+                <a href="#pedido" class="boton-pedir">
+                    🛒 Pedir
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- 8 CHARQUE -->
+
+        <div class="producto producto-8 carne">
+
+            <img src="empanadas.jpeg"
+                 alt="Empanada de charque">
+
+            <div class="producto-contenido">
+
+                <h3>🥩 Empanada de Charque</h3>
+
+                <p>
+                    Sabroso charque preparado
+                    al estilo tradicional.
+                </p>
+
+                <p class="precio">
+                    Bs. 10
+                </p>
+
+                <div class="cantidad-box">
+
+                    <label>Cantidad:</label>
+
+                    <input
+                        type="number"
+                        id="charque"
+                        class="cantidad"
+                        value="0"
+                        min="0">
+
+                </div>
+
+                <a href="#pedido" class="boton-pedir">
+                    🛒 Pedir
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- 9 ESPECIAL -->
+
+        <div class="producto producto-9 especial">
+
+            <img src="empanadas.jpeg"
+                 alt="Especial de la casa">
+
+            <div class="producto-contenido">
+
+                <h3>⭐ Especial de la Casa</h3>
+
+                <p>
+                    Una combinación especial
+                    de nuestros sabores.
+                </p>
+
+                <p class="precio">
+                    Bs. 10
+                </p>
+
+                <div class="cantidad-box">
+
+                    <label>Cantidad:</label>
+
+                    <input
+                        type="number"
+                        id="especial"
+                        class="cantidad"
+                        value="0"
+                        min="0">
+
+                </div>
+
+                <a href="#pedido" class="boton-pedir">
+                    🛒 Pedir
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- 10 VERDURAS -->
+
+        <div class="producto producto-10 especial">
+
+            <img src="empanadas.jpeg"
+                 alt="Empanada de verduras">
+
+            <div class="producto-contenido">
+
+                <h3>🥬 Empanada de Verduras</h3>
+
+                <p>
+                    Verduras frescas sazonadas
+                    con un toque casero.
+                </p>
+
+                <p class="precio">
+                    Bs. 10
+                </p>
+
+                <div class="cantidad-box">
+
+                    <label>Cantidad:</label>
+
+                    <input
+                        type="number"
+                        id="verduras"
+                        class="cantidad"
+                        value="0"
+                        min="0">
+
+                </div>
+
+                <a href="#pedido" class="boton-pedir">
+                    🛒 Pedir
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     PROMOCIONES
+================================================== -->
+
+<section id="promociones" class="promociones">
+
+    <h2>🎉 Promociones</h2>
+
+    <div class="promo-contenedor">
+
+        <div class="promo">
+
+            <h3>🥟 Compra 10</h3>
+
+            <p>
+                Compra 10 empanadas y recibe
+                1 empanada gratis.
+            </p>
+
+        </div>
+
+
+        <div class="promo">
+
+            <h3>🎊 Para Eventos</h3>
+
+            <p>
+                Descuentos especiales para
+                pedidos grandes y eventos.
+            </p>
+
+        </div>
+
+
+        <div class="promo">
+
+            <h3>⭐ Fin de Semana</h3>
+
+            <p>
+                Disfruta promociones especiales
+                durante el fin de semana.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     PEDIDO
+================================================== -->
+
+<section id="pedido">
+
+    <h2>📲 Realiza tu pedido</h2>
+
+    <div class="pedido-contenedor">
+
+        <div class="caja-pedido">
+
+            <h3>🥟 Tu Pedido</h3>
+
+
+            <label>Nombre:</label>
+
+            <input
+                type="text"
+                id="nombre"
+                placeholder="Escribe tu nombre">
+
+
+            <label>Dirección:</label>
+
+            <input
+                type="text"
+                id="direccion"
+                placeholder="Escribe tu dirección">
+
+
+            <label>Teléfono:</label>
+
+            <input
+                type="tel"
+                id="telefono"
+                placeholder="Tu número de teléfono">
+
+
+            <label>Observaciones:</label>
+
+            <textarea
+                id="observaciones"
+                placeholder="Ejemplo: entregar a las 18:00"></textarea>
+
+
+            <!-- MEDIO DE PAGO -->
+
+            <div class="medios-pago">
+
+                <h4>💳 Medio de pago</h4>
+
+                <div class="opciones-pago">
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="pago"
+                            value="Efectivo"
+                            checked>
+                        💵 Efectivo
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="pago"
+                            value="QR">
+                        📱 QR
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="pago"
+                            value="Transferencia">
+                        🏦 Transferencia
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- RESUMEN -->
+
+            <div class="resumen">
+
+                <h4>🧾 Resumen de tu pedido</h4>
+
+                <div id="resumenPedido">
+
+                    Todavía no seleccionaste empanadas.
+
+                </div>
+
+            </div>
+
+
+            <div class="total">
+
+                Total: Bs.
+                <span id="total">0</span>
+
+            </div>
+
+
+            <button
+                class="boton-whatsapp"
+                onclick="enviarWhatsApp()">
+
+                📲 Enviar pedido por WhatsApp
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     PUBLICIDAD
+================================================== -->
+
+<section
+    id="publicidad"
+    class="publicidad">
+
+    <h2>📢 Publica tu negocio</h2>
+
+    <div class="publicar-caja">
+
+        <h3>🏪 Da a conocer tu emprendimiento</h3>
+
+        <p style="text-align:center;">
+
+            Completa los datos de tu negocio y
+            publica tu producto en nuestra página.
+
+        </p>
+
+
+        <label>
+            Nombre del negocio:
+        </label>
+
+        <input
+            type="text"
+            id="nombreNegocio"
+            placeholder="Ejemplo: Panadería La Delicia">
+
+
+        <label>
+            Nombre del dueño:
+        </label>
+
+        <input
+            type="text"
+            id="duenoNegocio"
+            placeholder="Nombre del propietario">
+
+
+        <label>
+            Producto:
+        </label>
+
+        <input
+            type="text"
+            id="productoNegocio"
+            placeholder="¿Qué producto vendes?">
+
+
+        <label>
+            Precio:
+        </label>
+
+        <input
+            type="number"
+            id="precioNegocio"
+            placeholder="Ejemplo: 15">
+
+
+        <label>
+            Descripción:
+        </label>
+
+        <textarea
+            id="descripcionNegocio"
+            placeholder="Describe brevemente tu producto"></textarea>
+
+
+        <label>
+            🖼️ Imagen del producto:
+        </label>
+
+        <input
+            type="file"
+            id="imagenNegocio"
+            accept="image/*"
+            onchange="mostrarVistaImagen()">
+
+
+        <img
+            id="vistaImagen"
+            alt="Vista previa del producto">
+
+
+        <button
+            class="boton-publicar"
+            onclick="publicarNegocio()">
+
+            📢 Publicar mi negocio
+
+        </button>
+
+
+        <div class="negocios">
+
+            <h3>
+                🏪 Negocios publicados
+            </h3>
+
+            <div id="listaNegocios">
+
+                <p>
+                    Aún no hay negocios publicados.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     CONTACTO
+================================================== -->
+
+<section id="contacto">
+
+    <h2>📞 Contáctanos</h2>
+
+    <div class="contacto">
+
+        <p>
+            <strong>📱 Teléfono:</strong>
+            64870701
+        </p>
+
+        <p>
+            <strong>💬 WhatsApp:</strong>
+            64870701
+        </p>
+
+        <p>
+            <strong>📍 Dirección:</strong>
+            Santivañez - Cochabamba, Bolivia
+        </p>
+
+        <p>
+            <strong>📘 Facebook:</strong>
+            Empanadas Artesanales Santivañez
+        </p>
+
+
+        <div class="redes">
+
+            <a
+                href="https://wa.me/59164870701"
+                target="_blank">
+
+                💬 WhatsApp
+
+            </a>
+
+            <a href="#">
+                📘 Facebook
+            </a>
+
+            <a href="#">
+                📸 Instagram
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     PIE DE PÁGINA
+================================================== -->
+
+<footer>
+
+    <p>
+        © 2026 Empanadas Artesanales Santivañez
+    </p>
+
+    <p>
+        🥟 Sabor casero • Tradición • Calidad
+    </p>
+
+</footer>
+
+
+<!-- ==================================================
+     JAVASCRIPT
+================================================== -->
+
+<script>
+
+
+/* ==================================================
+   PRODUCTOS
+================================================== */
+
+const productos = {
+
+    queso: "Empanada de Queso",
+
+    carne: "Empanada de Carne",
+
+    pollo: "Empanada de Pollo",
+
+    huevo: "Empanada de Huevo",
+
+    jamon: "Jamón y Queso",
+
+    choclo: "Empanada de Choclo",
+
+    papa: "Empanada de Papa",
+
+    charque: "Empanada de Charque",
+
+    especial: "Especial de la Casa",
+
+    verduras: "Empanada de Verduras"
+
+};
+
+
+/* ==================================================
+   ACTUALIZAR PEDIDO
+================================================== */
+
+function actualizarPedido(){
+
+    let total = 0;
+
+    let cantidadTotal = 0;
+
+    let resumen = "";
+
+
+    for(let id in productos){
+
+        let campo =
+            document.getElementById(id);
+
+        let cantidad =
+            Number(campo.value) || 0;
+
+
+        if(cantidad > 0){
+
+            let subtotal =
+                cantidad * 10;
+
+
+            resumen +=
+                "🥟 " +
+                productos[id] +
+                ": " +
+                cantidad +
+                " × Bs. 10 = Bs. " +
+                subtotal +
+                "<br>";
+
+
+            total += subtotal;
+
+            cantidadTotal += cantidad;
+
+        }
+
+    }
+
+
+    let gratis =
+        Math.floor(cantidadTotal / 10);
+
+
+    if(gratis > 0){
+
+        resumen +=
+            "<br>🎁 Empanadas gratis: " +
+            gratis;
+
+    }
+
+
+    if(cantidadTotal === 0){
+
+        resumen =
+            "Todavía no seleccionaste empanadas.";
+
+    }
+
+
+    document.getElementById(
+        "resumenPedido"
+    ).innerHTML = resumen;
+
+
+    document.getElementById(
+        "total"
+    ).innerText = total;
+
+}
+
+
+/* ==================================================
+   ACTUALIZAR CUANDO CAMBIA CANTIDAD
+================================================== */
+
+document
+.querySelectorAll(".cantidad")
+.forEach(function(input){
+
+    input.addEventListener(
+        "input",
+        actualizarPedido
+    );
+
+});
+
+
+/* ==================================================
+   FILTRAR GALERÍA
+================================================== */
+
+function filtrar(categoria, boton){
+
+    let tarjetas =
+        document.querySelectorAll(".producto");
+
+
+    tarjetas.forEach(function(tarjeta){
+
+        if(categoria === "todos"){
+
+            tarjeta.style.display = "block";
+
+        }
+
+        else if(
+            tarjeta.classList.contains(categoria)
+        ){
+
+            tarjeta.style.display = "block";
+
+        }
+
+        else{
+
+            tarjeta.style.display = "none";
+
+        }
+
+    });
+
+
+    document
+    .querySelectorAll(".filtros button")
+    .forEach(function(boton){
+
+        boton.classList.remove("activo");
+
+    });
+
+
+    boton.classList.add("activo");
+
+}
+
+
+/* ==================================================
+   PUBLICIDAD MOSTRAR / OCULTAR
+================================================== */
+
+function mostrarPublicidad(){
+
+    let publicidad =
+        document.getElementById("publicidad");
+
+
+    publicidad.classList.toggle("mostrar");
+
+
+    if(
+        publicidad.classList.contains("mostrar")
+    ){
+
+        publicidad.scrollIntoView({
+            behavior:"smooth"
+        });
+
+    }
+
+}
+
+
+/* ==================================================
+   VISTA PREVIA DE IMAGEN
+================================================== */
+
+function mostrarVistaImagen(){
+
+    let archivo =
+        document.getElementById(
+            "imagenNegocio"
+        ).files[0];
+
+
+    let vista =
+        document.getElementById(
+            "vistaImagen"
+        );
+
+
+    if(!archivo){
+
+        vista.style.display = "none";
+
+        return;
+
+    }
+
+
+    let lector =
+        new FileReader();
+
+
+    lector.onload =
+        function(event){
+
+            vista.src =
+                event.target.result;
+
+            vista.style.display =
+                "block";
+
+        };
+
+
+    lector.readAsDataURL(archivo);
+
+}
+
+
+/* ==================================================
+   ENVIAR PEDIDO A WHATSAPP
+================================================== */
+
+function enviarWhatsApp(){
+
+    /* DATOS DEL CLIENTE */
+
+    let nombre =
+        document.getElementById(
+            "nombre"
+        ).value.trim();
+
+
+    let direccion =
+        document.getElementById(
+            "direccion"
+        ).value.trim();
+
+
+    let telefono =
+        document.getElementById(
+            "telefono"
+        ).value.trim();
+
+
+    let observaciones =
+        document.getElementById(
+            "observaciones"
+        ).value.trim();
+
+
+    /* VALIDAR DATOS */
+
+    if(nombre === ""){
+
+        alert(
+            "Por favor escribe tu nombre."
+        );
+
+        return;
+
+    }
+
+
+    if(direccion === ""){
+
+        alert(
+            "Por favor escribe tu dirección."
+        );
+
+        return;
+
+    }
+
+
+    if(telefono === ""){
+
+        alert(
+            "Por favor escribe tu número de teléfono."
+        );
+
+        return;
+
+    }
+
+
+    /* MEDIO DE PAGO */
+
+    let medioPago =
+        document.querySelector(
+            'input[name="pago"]:checked'
+        );
+
+
+    if(!medioPago){
+
+        alert(
+            "Selecciona un medio de pago."
+        );
+
+        return;
+
+    }
+
+
+    /* VARIABLES */
+
+    let total = 0;
+
+    let cantidadTotal = 0;
+
+    let pedido = "";
+
+
+    /* RECORRER PRODUCTOS */
+
+    for(let id in productos){
+
+        let campo =
+            document.getElementById(id);
+
+
+        let cantidad =
+            Number(campo.value) || 0;
+
+
+        if(cantidad > 0){
+
+            let subtotal =
+                cantidad * 10;
+
+
+            pedido +=
+                "🥟 " +
+                productos[id] +
+                "\n";
+
+
+            pedido +=
+                "Cantidad: " +
+                cantidad +
+                "\n";
+
+
+            pedido +=
+                "Precio unitario: Bs. 10\n";
+
+
+            pedido +=
+                "Subtotal: Bs. " +
+                subtotal +
+                "\n\n";
+
+
+            total += subtotal;
+
+            cantidadTotal += cantidad;
+
+        }
+
+    }
+
+
+    /* VALIDAR PEDIDO */
+
+    if(cantidadTotal === 0){
+
+        alert(
+            "Selecciona al menos una empanada antes de enviar el pedido."
+        );
+
+        return;
+
+    }
+
+
+    /* EMPANADAS GRATIS */
+
+    let gratis =
+        Math.floor(
+            cantidadTotal / 10
+        );
+
+
+    /* CREAR MENSAJE */
+
+    let mensaje =
+        "🥟 NUEVO PEDIDO - EMPANADAS ARTESANALES SANTIVAÑEZ\n\n";
+
+
+    mensaje +=
+        "👤 DATOS DEL CLIENTE\n";
+
+
+    mensaje +=
+        "Nombre: " +
+        nombre +
+        "\n";
+
+
+    mensaje +=
+        "📍 Dirección: " +
+        direccion +
+        "\n";
+
+
+    mensaje +=
+        "📞 Teléfono: " +
+        telefono +
+        "\n\n";
+
+
+    mensaje +=
+        "🧾 PEDIDO\n\n";
+
+
+    mensaje +=
+        pedido;
+
+
+    mensaje +=
+        "🎁 Empanadas gratis: " +
+        gratis +
+        "\n\n";
+
+
+    mensaje +=
+        "💰 *TOTAL A PAGAR: Bs. " +
+        total +
+        "*\n\n";
+
+
+    mensaje +=
+        "💳 MEDIO DE PAGO\n";
+
+
+    mensaje +=
+        medioPago.value +
+        "\n\n";
+
+
+    mensaje +=
+        "📝 OBSERVACIONES\n";
+
+
+    if(observaciones !== ""){
+
+        mensaje +=
+            observaciones;
+
+    }
+
+    else{
+
+        mensaje +=
+            "Ninguna";
+
+    }
+
+
+    /* NÚMERO DE WHATSAPP */
+
+    let numero =
+        "59164870701";
+
+
+    /* CREAR ENLACE */
+
+    let enlace =
+        "https://wa.me/" +
+        numero +
+        "?text=" +
+        encodeURIComponent(mensaje);
+
+
+    /* ABRIR WHATSAPP */
+
+    window.open(
+        enlace,
+        "_blank"
+    );
+
+}
+
+
+/* ==================================================
+   PUBLICAR NEGOCIO
+================================================== */
+
+function publicarNegocio(){
+
+    let nombre =
+        document.getElementById(
+            "nombreNegocio"
+        ).value.trim();
+
+
+    let dueno =
+        document.getElementById(
+            "duenoNegocio"
+        ).value.trim();
+
+
+    let producto =
+        document.getElementById(
+            "productoNegocio"
+        ).value.trim();
+
+
+    let precio =
+        document.getElementById(
+            "precioNegocio"
+        ).value.trim();
+
+
+    let descripcion =
+        document.getElementById(
+            "descripcionNegocio"
+        ).value.trim();
+
+
+    let archivo =
+        document.getElementById(
+            "imagenNegocio"
+        ).files[0];
+
+
+    if(
+        nombre === "" ||
+        dueno === "" ||
+        producto === "" ||
+        precio === "" ||
+        descripcion === ""
+    ){
+
+        alert(
+            "Completa todos los datos del negocio."
+        );
+
+        return;
+
+    }
+
+
+    let negocio =
+        document.createElement("div");
+
+
+    negocio.className =
+        "negocio";
+
+
+    let contenido =
+
+        "<h4>🏪 " +
+        escaparHTML(nombre) +
+        "</h4>" +
+
+        "<p><strong>👤 Dueño:</strong> " +
+        escaparHTML(dueno) +
+        "</p>" +
+
+        "<p><strong>🥟 Producto:</strong> " +
+        escaparHTML(producto) +
+        "</p>" +
+
+        "<p><strong>💰 Precio:</strong> Bs. " +
+        escaparHTML(precio) +
+        "</p>" +
+
+        "<p>" +
+        escaparHTML(descripcion) +
+        "</p>";
+
+
+    if(archivo){
+
+        let lector =
+            new FileReader();
+
+
+        lector.onload =
+            function(event){
+
+                negocio.innerHTML =
+                    contenido +
+                    "<img src='" +
+                    event.target.result +
+                    "' alt='Producto publicado'>";
+
+
+                agregarNegocio(negocio);
+
+            };
+
+
+        lector.readAsDataURL(archivo);
+
+    }
+
+    else{
+
+        negocio.innerHTML =
+            contenido;
+
+
+        agregarNegocio(negocio);
+
+    }
+
+}
+
+
+/* ==================================================
+   AGREGAR NEGOCIO
+================================================== */
+
+function agregarNegocio(negocio){
+
+    let lista =
+        document.getElementById(
+            "listaNegocios"
+        );
+
+
+    if(
+        lista.innerText.includes(
+            "Aún no hay negocios"
+        )
+    ){
+
+        lista.innerHTML = "";
+
+    }
+
+
+    lista.appendChild(negocio);
+
+
+    document.getElementById(
+        "nombreNegocio"
+    ).value = "";
+
+
+    document.getElementById(
+        "duenoNegocio"
+    ).value = "";
+
+
+    document.getElementById(
+        "productoNegocio"
+    ).value = "";
+
+
+    document.getElementById(
+        "precioNegocio"
+    ).value = "";
+
+
+    document.getElementById(
+        "descripcionNegocio"
+    ).value = "";
+
+
+    document.getElementById(
+        "imagenNegocio"
+    ).value = "";
+
+
+    document.getElementById(
+        "vistaImagen"
+    ).style.display = "none";
+
+
+    alert(
+        "¡Tu negocio fue publicado correctamente!"
+    );
+
+}
+
+
+/* ==================================================
+   SEGURIDAD PARA TEXTO
+================================================== */
+
+function escaparHTML(texto){
+
+    let div =
+        document.createElement("div");
+
+
+    div.textContent =
+        texto;
+
+
+    return div.innerHTML;
+
+}
+
+
+/* ==================================================
+   MOSTRAR GALERÍA AL CARGAR
+================================================== */
+
+window.addEventListener(
+    "load",
+    function(){
+
+        actualizarPedido();
+
+    }
+);
+
+</script>
+
+
+</body>
+</html>
